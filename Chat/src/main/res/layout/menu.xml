@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout
+        android:id="@+id/menu_layout"
         android:layout_width="409dp"
         android:layout_height="100dp"
         android:orientation="horizontal"
         tools:ignore="MissingConstraints"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="628dp">
+        xmlns:tools="http://schemas.android.com/tools">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button"
+            android:backgroundTint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:background=""
             android:textColor="@color/black"
             android:textSize="10dp"
             android:layout_weight="1"
@@ -21,29 +20,29 @@
 
         <Button
             android:id="@+id/button4"
+            android:backgroundTint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background=""
             android:text="Calls"
             android:textColor="@color/black"
             android:textSize="10dp" />
 
         <Button
             android:id="@+id/button6"
+            android:backgroundTint="@color/white"
             android:layout_width="121dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background=""
             android:text="Communities"
             android:textColor="@color/black"
             android:textSize="10dp" />
 
         <Button
             android:id="@+id/button5"
+            android:backgroundTint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:background=""
             android:textColor="@color/black"
             android:textSize="10dp"
             android:layout_weight="1"
