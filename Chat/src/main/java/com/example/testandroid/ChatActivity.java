@@ -1,6 +1,9 @@
 package com.example.testandroid;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 
@@ -37,7 +40,6 @@ public class ChatActivity extends AppCompatActivity {
                     replaceFragment(new SettingFragment());
                     break;
             }
-
             return true;
         });
     }
@@ -45,7 +47,8 @@ public class ChatActivity extends AppCompatActivity {
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager= getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout,fragment);
+        fragmentTransaction.replace(R.id.Constraint_layout,fragment);
         fragmentTransaction.commit();
     }
+
 }

@@ -3,18 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Chat/Chat/src/main/res/drawable/ic_baseline_chat_24.xml" value="0.194" />
+        <entry key="..\:/Chat/Chat/src/main/res/drawable/ic_icons8_community_50_1.xml" value="0.194" />
         <entry key="..\:/Chat/Chat/src/main/res/drawable/layout_botron.xml" value="0.2115" />
-        <entry key="..\:/Chat/Chat/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Chat/Chat/src/main/res/drawable/nut_botron.xml" value="0.194" />
+        <entry key="..\:/Chat/Chat/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Chat/Chat/src/main/res/layout/call.xml" value="0.25884543761638734" />
         <entry key="..\:/Chat/Chat/src/main/res/layout/chats.xml" value="0.18" />
         <entry key="..\:/Chat/Chat/src/main/res/layout/communities.xml" value="0.25" />
-        <entry key="..\:/Chat/Chat/src/main/res/layout/fragment_call.xml" value="0.25" />
-        <entry key="..\:/Chat/Chat/src/main/res/layout/fragment_chat.xml" value="0.16077898550724637" />
-        <entry key="..\:/Chat/Chat/src/main/res/layout/fragment_communication.xml" value="0.16077898550724637" />
-        <entry key="..\:/Chat/Chat/src/main/res/layout/fragment_setting.xml" value="0.16077898550724637" />
+        <entry key="..\:/Chat/Chat/src/main/res/layout/fragment_call.xml" value="0.33" />
+        <entry key="..\:/Chat/Chat/src/main/res/layout/fragment_chat.xml" value="0.25" />
+        <entry key="..\:/Chat/Chat/src/main/res/layout/fragment_communication.xml" value="0.22" />
+        <entry key="..\:/Chat/Chat/src/main/res/layout/fragment_setting.xml" value="0.25" />
         <entry key="..\:/Chat/Chat/src/main/res/layout/login.xml" value="0.25" />
         <entry key="..\:/Chat/Chat/src/main/res/layout/menu.xml" value="0.2" />
         <entry key="..\:/Chat/Chat/src/main/res/layout/setting.xml" value="0.1" />
+        <entry key="..\:/Chat/Chat/src/main/res/layout/signup.xml" value="0.16077898550724637" />
         <entry key="..\:/Chat/Chat/src/main/res/menu/bottom_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Chat/Chat/src/main/res/menu/botton_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Chat/app/src/main/res/layout/login.xml" value="0.20416666666666666" />

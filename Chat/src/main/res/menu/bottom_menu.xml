@@ -11,6 +11,7 @@
         android:title="Call"/>
     <item
         android:id="@+id/Communication"
+        android:icon="@drawable/ic_icons8_community_50_1"
         android:title="Communication"/>
     <item
         android:icon="@drawable/ic_baseline_settings_24"
