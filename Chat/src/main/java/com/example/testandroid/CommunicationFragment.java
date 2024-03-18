@@ -1,5 +1,6 @@
 package com.example.testandroid;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,7 +16,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class CommunicationFragment extends Fragment {
-
+    private ListView listView;
+    Activity context;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,6 +62,14 @@ public class CommunicationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        context=getActivity();
         return inflater.inflate(R.layout.fragment_communication, container, false);
+    }
+    public void onStart(){
+        super.onStart();
+        String[] items={"Group"};
+        listView = (ListView) context.findViewById(R.id.ListCommunication);
+        ChatListAdapter adapter = new ChatListAdapter(items,context);
+        listView.setAdapter(adapter);
     }
 }
