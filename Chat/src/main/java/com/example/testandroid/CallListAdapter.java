@@ -10,11 +10,12 @@ import android.widget.TextView;
 public class CallListAdapter extends BaseAdapter {
     private Activity activity;
     private String[] itemcall;
-
     public CallListAdapter(String[] itemcall,Activity activity){
         this.activity = activity;
         this.itemcall=itemcall;
     }
+
+
     @Override
     public int getCount() {
         return itemcall.length;

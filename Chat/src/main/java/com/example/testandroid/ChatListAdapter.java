@@ -1,15 +1,18 @@
 package com.example.testandroid;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 public class ChatListAdapter extends BaseAdapter {
     private Activity activity;
     private String[] itemchat;
+
     public ChatListAdapter(String[] itemchat,Activity activity){
         this.activity = activity;
         this.itemchat=itemchat;
@@ -36,7 +39,6 @@ public class ChatListAdapter extends BaseAdapter {
 
         // Đổ dữ liệu vào biến View, view này chính là những gì nằm trong item_name.xml
         convertView = inflater.inflate(R.layout.item_chat, null);
-
         // Đặt chữ cho từng view trong danh sách.
         TextView chatName = (TextView) convertView.findViewById(R.id.chat_name);
         chatName.setText(itemchat[position]);
@@ -44,4 +46,5 @@ public class ChatListAdapter extends BaseAdapter {
         // Trả về view kết quả.
         return convertView;
     }
+
 }

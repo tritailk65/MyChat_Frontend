@@ -9,8 +9,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -73,5 +77,16 @@ public class ChatFragment extends Fragment {
         listView = (ListView) context.findViewById(R.id.ListChat);
         ChatListAdapter adapter = new ChatListAdapter(items,context);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Get the selected item from the ListView
+
+                // Create an Intent to open a new activity with different information
+                Intent intent = new Intent(context, ChatBoxActivity.class);
+                // Add any relevant data to the intent (e.g., item details)
+                startActivity(intent);
+            }
+        });
     }
 }

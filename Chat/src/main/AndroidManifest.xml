@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".ChatActivity"></activity>
         <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".AddNewCallActivity"></activity>
+        <activity android:name=".ChatBoxActivity"></activity>
     </application>
 
 </manifest>
