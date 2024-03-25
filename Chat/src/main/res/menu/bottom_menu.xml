@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ChatList"
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="Chat"/>
+    <item
+        android:icon="@drawable/ic_baseline_call_24"
+        android:id="@+id/CallList"
+        android:title="Call"/>
+    <item
+        android:id="@+id/Communication"
+        android:icon="@drawable/ic_icons8_community_50_1"
+        android:title="Communication"/>
+    <item
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:id="@+id/Setting"
+        android:title="Setting"/>
+</menu>
