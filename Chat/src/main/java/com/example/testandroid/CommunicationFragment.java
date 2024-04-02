@@ -69,7 +69,7 @@ public class CommunicationFragment extends Fragment {
         super.onStart();
         String[] items={"Group"};
         listView = (ListView) context.findViewById(R.id.ListCommunication);
-        ChatListAdapter adapter = new ChatListAdapter(items,context);
+        ChatListAdapter adapter = new ChatListAdapter(items,context,items,items);
         listView.setAdapter(adapter);
     }
 }

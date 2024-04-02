@@ -73,9 +73,11 @@ public class ChatFragment extends Fragment {
     }
     public void onStart(){
         super.onStart();
-        String[] items={"Admin"};
+        String[] names={"Admin","Person 1","Person 2","Person 3"};
+        String[] contents={"Hello","Xin chào","Kết bạn nhé","Rất vui khi được kết bạn"};
+        String[] dates={"2/4/2024","1/4/2024","30/3/2024","25/3/2024"};
         listView = (ListView) context.findViewById(R.id.ListChat);
-        ChatListAdapter adapter = new ChatListAdapter(items,context);
+        ChatListAdapter adapter = new ChatListAdapter(names,context,contents,dates);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

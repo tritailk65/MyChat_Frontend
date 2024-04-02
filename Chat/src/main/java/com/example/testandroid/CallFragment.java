@@ -71,7 +71,7 @@ public class CallFragment extends Fragment {
         super.onStart();
         String[] items={"Admin"};
         listView = (ListView) context.findViewById(R.id.ListCall);
-        ChatListAdapter adapter = new ChatListAdapter(items,context);
+        ChatListAdapter adapter = new ChatListAdapter(items,context,items,items);
         listView.setAdapter(adapter);
         ImageView imageView= context.findViewById(R.id.addCall);
         imageView.setOnClickListener(new View.OnClickListener() {
