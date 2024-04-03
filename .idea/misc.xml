@@ -50,9 +50,10 @@
         <entry key="..\:/android 2/UI/MyChat_APP/Chat/src/main/res/drawable/message_received_background.xml" value="0.181" />
         <entry key="..\:/android 2/UI/MyChat_APP/Chat/src/main/res/drawable/message_sent_background.xml" value="0.181" />
         <entry key="..\:/android 2/UI/MyChat_APP/Chat/src/main/res/drawable/nut_botron.xml" value="0.181" />
+        <entry key="..\:/android 2/UI/MyChat_APP/Chat/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/android 2/UI/MyChat_APP/Chat/src/main/res/layout/chatbox.xml" value="0.25" />
         <entry key="..\:/android 2/UI/MyChat_APP/Chat/src/main/res/layout/edit_call.xml" value="0.15625" />
-        <entry key="..\:/android 2/UI/MyChat_APP/Chat/src/main/res/layout/fragment_chat.xml" value="0.15625" />
+        <entry key="..\:/android 2/UI/MyChat_APP/Chat/src/main/res/layout/fragment_chat.xml" value="0.33" />
         <entry key="..\:/android 2/UI/MyChat_APP/Chat/src/main/res/layout/item_chat.xml" value="0.5" />
         <entry key="..\:/android 2/UI/MyChat_APP/Chat/src/main/res/layout/login.xml" value="0.15625" />
         <entry key="..\:/android 2/UI/MyChat_APP/Chat/src/main/res/menu/bottom_menu.xml" value="0.20416666666666666" />

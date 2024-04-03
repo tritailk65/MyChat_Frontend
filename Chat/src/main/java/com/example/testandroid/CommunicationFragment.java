@@ -63,13 +63,14 @@ public class CommunicationFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         context=getActivity();
+        View view=inflater.inflate(R.layout.fragment_communication, container, false);
+        String[] items={"Group"};
+        listView = view.findViewById(R.id.ListCommunication);
+        ChatListAdapter adapter = new ChatListAdapter(items,context,items,items);
+        listView.setAdapter(adapter);
         return inflater.inflate(R.layout.fragment_communication, container, false);
     }
     public void onStart(){
         super.onStart();
-        String[] items={"Group"};
-        listView = (ListView) context.findViewById(R.id.ListCommunication);
-        ChatListAdapter adapter = new ChatListAdapter(items,context,items,items);
-        listView.setAdapter(adapter);
     }
 }

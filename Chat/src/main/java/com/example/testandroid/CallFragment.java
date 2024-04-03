@@ -64,16 +64,13 @@ public class CallFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View view=inflater.inflate(R.layout.fragment_call, container, false);
         context=getActivity();
-        return inflater.inflate(R.layout.fragment_call, container, false);
-    }
-    public void onStart(){
-        super.onStart();
         String[] items={"Admin"};
-        listView = (ListView) context.findViewById(R.id.ListCall);
+        listView =view.findViewById(R.id.ListCall);
         ChatListAdapter adapter = new ChatListAdapter(items,context,items,items);
         listView.setAdapter(adapter);
-        ImageView imageView= context.findViewById(R.id.addCall);
+        ImageView imageView= view.findViewById(R.id.addCall);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,5 +78,10 @@ public class CallFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        return view;
+    }
+    public void onStart(){
+        super.onStart();
+
     }
 }

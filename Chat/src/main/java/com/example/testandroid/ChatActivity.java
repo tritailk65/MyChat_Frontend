@@ -28,7 +28,8 @@ public class ChatActivity extends AppCompatActivity {
 
             switch (item.getItemId()){
                 case R.id.ChatList:
-                    replaceFragment(new ChatFragment());
+                    ChatFragment chatFragment=new ChatFragment();
+                    replaceFragment(chatFragment);
                     break;
                 case  R.id.CallList:
                     replaceFragment(new CallFragment());
