@@ -3,19 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/android/chatapp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
-        <entry key="..\:/android/chatapp/app/src/main/res/drawable/background_chat_input.xml" value="0.2265" />
-        <entry key="..\:/android/chatapp/app/src/main/res/drawable/background_content_top.xml" value="0.2265" />
-        <entry key="..\:/android/chatapp/app/src/main/res/drawable/ic_back.xml" value="0.121" />
-        <entry key="..\:/android/chatapp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
-        <entry key="..\:/android/chatapp/app/src/main/res/drawable/ic_send.xml" value="0.2265" />
-        <entry key="..\:/android/chatapp/app/src/main/res/drawable/ic_sharp_info_24.xml" value="0.121" />
-        <entry key="..\:/android/chatapp/app/src/main/res/drawable/message_received_background.xml" value="0.121" />
-        <entry key="..\:/android/chatapp/app/src/main/res/drawable/message_sent_background.xml" value="0.121" />
-        <entry key="..\:/android/chatapp/app/src/main/res/drawable/message_sent_container.xml" value="0.2" />
-        <entry key="..\:/android/chatapp/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/android/chatapp/app/src/main/res/layout/add_new_call.xml" value="0.264" />
-        <entry key="..\:/android/chatapp/app/src/main/res/layout/edit_call.xml" value="0.2" />
+        <entry key="..\:/android/CallApplication/app/src/main/res/drawable/background_btn.xml" value="0.2265" />
+        <entry key="..\:/android/CallApplication/app/src/main/res/drawable/background_camera.xml" value="0.2265" />
+        <entry key="..\:/android/CallApplication/app/src/main/res/drawable/background_group_btn.xml" value="0.2265" />
+        <entry key="..\:/android/CallApplication/app/src/main/res/drawable/ic_back.xml" value="0.2265" />
+        <entry key="..\:/android/CallApplication/app/src/main/res/drawable/ic_btn_call.xml" value="0.2265" />
+        <entry key="..\:/android/CallApplication/app/src/main/res/drawable/ic_call_end.xml" value="0.2265" />
+        <entry key="..\:/android/CallApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="..\:/android/CallApplication/app/src/main/res/layout/chat_call_activity.xml" value="0.22826086956521738" />
+        <entry key="..\:/android/CallApplication/app/src/main/res/layout/video_call_activity.xml" value="0.22826086956521738" />
       </map>
     </option>
   </component>
