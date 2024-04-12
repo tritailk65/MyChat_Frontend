@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -23,7 +24,8 @@ import android.widget.Toast;
  */
 public class ChatFragment extends Fragment {
     private ListView listView;
-    Activity context;
+    private Activity context;
+    private ArrayAdapter<String> adapter;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -67,15 +69,13 @@ public class ChatFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view=inflater.inflate(R.layout.fragment_chat, container, false);
+        listView = view.findViewById(R.id.ListChat);
+        String[] names={"Admin","Person 1","Person 2","Person 3"};
+        String[] contents={"Hello","Xin chào","Kết bạn nhé","Rất vui khi được kết bạn"};
+        String[] dates={"2/4/2024","1/4/2024","30/3/2024","25/3/2024"};
         context=getActivity();
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat, container, false);
-    }
-    public void onStart(){
-        super.onStart();
-        String[] items={"Admin"};
-        listView = (ListView) context.findViewById(R.id.ListChat);
-        ChatListAdapter adapter = new ChatListAdapter(items,context);
+        ChatListAdapter adapter = new ChatListAdapter(names,context,contents,dates);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -88,5 +88,10 @@ public class ChatFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        // Inflate the layout for this fragment
+        return view;
+    }
+    public void onStart(){
+        super.onStart();
     }
 }

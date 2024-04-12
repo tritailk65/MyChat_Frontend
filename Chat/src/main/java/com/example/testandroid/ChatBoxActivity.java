@@ -23,5 +23,21 @@ public class ChatBoxActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageView goCall=findViewById(R.id.goCall);
+        goCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChatBoxActivity.this, GoCallActivity.class);
+                startActivity(intent);
+            }
+        });
+        ImageView goCamera=findViewById(R.id.goCamera);
+        goCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChatBoxActivity.this, GoVideoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
