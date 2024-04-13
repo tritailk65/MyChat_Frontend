@@ -32,7 +32,7 @@ public class ChatBoxActivity extends AppCompatActivity {
             }
         });
         ImageView goCamera=findViewById(R.id.goCamera);
-        goCall.setOnClickListener(new View.OnClickListener() {
+        goCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChatBoxActivity.this, GoVideoActivity.class);
