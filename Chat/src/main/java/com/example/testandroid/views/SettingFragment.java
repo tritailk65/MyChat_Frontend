@@ -1,6 +1,7 @@
-package com.example.testandroid;
+package com.example.testandroid.views;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,15 +9,16 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
+import android.widget.Button;
+
+import com.example.testandroid.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link CommunicationFragment#newInstance} factory method to
+ * Use the {@link SettingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CommunicationFragment extends Fragment {
-    private ListView listView;
+public class SettingFragment extends Fragment {
     Activity context;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +29,7 @@ public class CommunicationFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public CommunicationFragment() {
+    public SettingFragment() {
         // Required empty public constructor
     }
 
@@ -37,11 +39,11 @@ public class CommunicationFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment CommunicationFragment.
+     * @return A new instance of fragment SettingFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CommunicationFragment newInstance(String param1, String param2) {
-        CommunicationFragment fragment = new CommunicationFragment();
+    public static SettingFragment newInstance(String param1, String param2) {
+        SettingFragment fragment = new SettingFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -52,25 +54,30 @@ public class CommunicationFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        context=getActivity();
-        View view=inflater.inflate(R.layout.fragment_communication, container, false);
-        String[] items={"Group"};
-        listView = view.findViewById(R.id.ListCommunication);
-        ChatListAdapter adapter = new ChatListAdapter(items,context,items,items);
-        listView.setAdapter(adapter);
-        return inflater.inflate(R.layout.fragment_communication, container, false);
+        context= getActivity();
+        return inflater.inflate(R.layout.fragment_setting, container, false);
     }
     public void onStart(){
         super.onStart();
+        Button logout= (Button) context.findViewById(R.id.btn_logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context,MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -1,4 +1,4 @@
-package com.example.testandroid;
+package com.example.testandroid.views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.testandroid.R;
 
 public class GoCallActivity extends AppCompatActivity {
     @Override
