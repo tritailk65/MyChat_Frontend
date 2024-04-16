@@ -1,4 +1,4 @@
-package com.example.testandroid;
+package com.example.testandroid.adapters;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -7,23 +7,19 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class CallListAdapter extends BaseAdapter {
+import com.example.testandroid.R;
+
+public class CommunicationAdapter extends BaseAdapter {
     private Activity activity;
-    private String[] itemcall;
-    public CallListAdapter(String[] itemcall,Activity activity){
-        this.activity = activity;
-        this.itemcall=itemcall;
-    }
-
-
+    private String[] itemcom;
     @Override
     public int getCount() {
-        return itemcall.length;
+        return itemcom.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return itemcall[position];
+        return itemcom[position];
     }
 
     @Override
@@ -33,15 +29,14 @@ public class CallListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Gọi layoutInflater ra để bắt đầu ánh xạ view và data.
         LayoutInflater inflater = activity.getLayoutInflater();
 
         // Đổ dữ liệu vào biến View, view này chính là những gì nằm trong item_name.xml
-        convertView = inflater.inflate(R.layout.item_call, null);
+        convertView = inflater.inflate(R.layout.item_chat, null);
 
         // Đặt chữ cho từng view trong danh sách.
-        TextView chatName = (TextView) convertView.findViewById(R.id.call_name);
-        chatName.setText(itemcall[position]);
+        TextView chatName = (TextView) convertView.findViewById(R.id.chat_name);
+        chatName.setText(itemcom[position]);
 
         // Trả về view kết quả.
         return convertView;

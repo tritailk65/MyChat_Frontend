@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:ignore="MissingConstraints"
-    tools:context=".SettingFragment">
+    tools:context=".views.SettingFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,18 +31,70 @@
             android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/gray"
             android:layout_marginStart="4dp"
             android:layout_marginTop="60dp"
+            android:background="@color/gray"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="95dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="116dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/editAvatar"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="172dp"
+            android:src="@drawable/ic_baseline_edit_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="116dp"
+            android:text="AccountName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="140dp"
+            android:text="Description"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/editName"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/ic_baseline_edit_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/btn_logout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginBottom="196dp"
+        android:layout_marginBottom="424dp"
         android:backgroundTint="@color/white"
         android:text="Log Out"
         android:textColor="@color/black"

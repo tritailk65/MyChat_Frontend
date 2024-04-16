@@ -1,14 +1,14 @@
-package com.example.testandroid;
+package com.example.testandroid.views;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
+
+import com.example.testandroid.R;
 
 public class ChatBoxActivity extends AppCompatActivity {
     @Override
@@ -32,7 +32,7 @@ public class ChatBoxActivity extends AppCompatActivity {
             }
         });
         ImageView goCamera=findViewById(R.id.goCamera);
-        goCamera.setOnClickListener(new View.OnClickListener() {
+        goCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChatBoxActivity.this, GoVideoActivity.class);
