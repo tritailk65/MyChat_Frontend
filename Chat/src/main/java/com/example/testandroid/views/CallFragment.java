@@ -1,4 +1,4 @@
-package com.example.testandroid;
+package com.example.testandroid.views;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,23 +9,20 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.testandroid.R;
+import com.example.testandroid.adapters.ChatListAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ChatFragment#newInstance} factory method to
+ * Use the {@link CallFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ChatFragment extends Fragment {
+public class CallFragment extends Fragment {
     private ListView listView;
-    private Activity context;
-    private ArrayAdapter<String> adapter;
+    Activity context;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -35,7 +32,7 @@ public class ChatFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ChatFragment() {
+    public CallFragment() {
         // Required empty public constructor
     }
 
@@ -45,11 +42,11 @@ public class ChatFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ChatFragment.
+     * @return A new instance of fragment CallFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ChatFragment newInstance(String param1, String param2) {
-        ChatFragment fragment = new ChatFragment();
+    public static CallFragment newInstance(String param1, String param2) {
+        CallFragment fragment = new CallFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -69,29 +66,25 @@ public class ChatFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_chat, container, false);
-        listView = view.findViewById(R.id.ListChat);
-        String[] names={"Admin","Person 1","Person 2","Person 3"};
-        String[] contents={"Hello","Xin chào","Kết bạn nhé","Rất vui khi được kết bạn"};
-        String[] dates={"2/4/2024","1/4/2024","30/3/2024","25/3/2024"};
+        // Inflate the layout for this fragment
+        View view=inflater.inflate(R.layout.fragment_call, container, false);
         context=getActivity();
-        ChatListAdapter adapter = new ChatListAdapter(names,context,contents,dates);
+        String[] items={"Admin"};
+        listView =view.findViewById(R.id.ListCall);
+        ChatListAdapter adapter = new ChatListAdapter(items,context,items,items);
         listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        ImageView imageView= view.findViewById(R.id.addCall);
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Get the selected item from the ListView
-
-                // Create an Intent to open a new activity with different information
-                Intent intent = new Intent(context, ChatBoxActivity.class);
-                // Add any relevant data to the intent (e.g., item details)
+            public void onClick(View v) {
+                Intent intent = new Intent(context, AddNewCallActivity.class);
                 startActivity(intent);
             }
         });
-        // Inflate the layout for this fragment
         return view;
     }
     public void onStart(){
         super.onStart();
+
     }
 }
