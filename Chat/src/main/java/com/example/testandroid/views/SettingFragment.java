@@ -22,6 +22,7 @@ import android.widget.ImageView;
 
 import com.example.testandroid.R;
 import com.example.testandroid.databinding.FragmentSettingBinding;
+import com.example.testandroid.databinding.FragmentSettingBindingImpl;
 import com.example.testandroid.databinding.LoginBinding;
 import com.example.testandroid.viewmodels.SettingViewModel;
 
@@ -112,6 +113,7 @@ public class SettingFragment extends Fragment {
     public void onStart(){
         super.onStart();
     }
+
     public class MyDialogFragment extends DialogFragment {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {

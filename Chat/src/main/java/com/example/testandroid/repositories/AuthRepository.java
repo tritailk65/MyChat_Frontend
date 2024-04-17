@@ -20,6 +20,7 @@ public class AuthRepository {
     public static final String AUTH_API = "http://192.168.0.103:81/api/User/";
     public AuthenticateService userService;
     public MutableLiveData<Boolean> isAuthenticateSuccess ;
+    public MutableLiveData<Boolean> isLogOut ;
     public AuthRepository() {
         isAuthenticateSuccess = new MutableLiveData<Boolean>(false);
 
@@ -70,5 +71,10 @@ public class AuthRepository {
 
     public LiveData<Boolean> getIsAuthenticateSuccess(){
         return isAuthenticateSuccess;
+    }
+
+    public LiveData<Boolean> getIsLogOut(){
+        isLogOut=new MutableLiveData<>(true);
+        return isLogOut;
     }
 }

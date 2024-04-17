@@ -19,7 +19,7 @@ public class SettingViewModel extends BaseObservable {
 
     public void init(){
         authRepository = new AuthRepository();
-        isAuthLiveData = authRepository.getIsAuthenticateSuccess();
+        isAuthLiveData = authRepository.getIsLogOut();
     }
     public void setContextViewModel(Context context){
         this.context = context;
@@ -34,10 +34,13 @@ public class SettingViewModel extends BaseObservable {
     }
 
     public void onButtonClickedLogOut() {
-        if (true)
+        if (authRepository.getIsLogOut().getValue() == true){
+            authRepository.setContextRepo(context);
             setToastMessage("Đăng xuất thành công");
-        else
+        }
+        else{
             setToastMessage("Đăng xuất thất bại");
+        }
     }
 
 
