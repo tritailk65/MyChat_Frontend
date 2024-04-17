@@ -1,6 +1,9 @@
 package com.example.testandroid.views;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.testandroid.R;
 import com.example.testandroid.databinding.ActivityMainBinding;
+import com.example.testandroid.viewmodels.SettingViewModel;
 
 public class ChatActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -37,7 +41,8 @@ public class ChatActivity extends AppCompatActivity {
                     replaceFragment(new CommunicationFragment());
                     break;
                 case R.id.Setting:
-                    replaceFragment(new SettingFragment());
+                    SettingFragment settingFragment=new SettingFragment();
+                    replaceFragment(settingFragment);
                     break;
             }
             return true;
@@ -51,5 +56,13 @@ public class ChatActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.Constraint_layout,fragment);
         fragmentTransaction.commit();
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
+        if (requestCode == 1 && resultCode == RESULT_OK && data != null) {
+            Uri selectedImageUri = data.getData();
+            // Xử lý hình ảnh đã chọn ở đây
+        }
+    }
 }

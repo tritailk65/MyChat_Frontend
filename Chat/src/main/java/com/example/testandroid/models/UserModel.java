@@ -1,6 +1,7 @@
 package com.example.testandroid.models;
 
-import androidx.annotation.Nullable;
+
+import javax.annotation.Nullable;
 
 public class UserModel {
     @Nullable
