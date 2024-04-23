@@ -7,12 +7,14 @@ import androidx.lifecycle.MutableLiveData;
 import com.example.testandroid.apis.AuthenticateService;
 import com.example.testandroid.models.AuthRequest;
 import com.example.testandroid.models.AuthResponse;
+import com.example.testandroid.util.ApiResponse;
 import com.example.testandroid.util.TokenManager;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AuthRepository {
@@ -34,6 +36,7 @@ public class AuthRepository {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(AuthenticateService.class);
+
     }
 
     public void setContextRepo(Context context) {
@@ -63,7 +66,6 @@ public class AuthRepository {
                     }
                 });
     }
-
     private void saveTokenToSharedPreferences(String token) {
         // Lưu token
         TokenManager.saveToken(context,token);
@@ -74,7 +76,6 @@ public class AuthRepository {
     }
 
     public LiveData<Boolean> getIsLogOut(){
-        isLogOut=new MutableLiveData<>(true);
         return isLogOut;
     }
 }

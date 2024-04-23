@@ -83,6 +83,7 @@ public class SettingFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_call, container, false);
         FragmentSettingBinding loginBinding = DataBindingUtil.setContentView(context, R.layout.fragment_call);
         settingViewModel=new SettingViewModel();
+        settingViewModel.init();
         settingViewModel.setContextViewModel(context.getApplicationContext());
         loginBinding.setViewModel(settingViewModel);
         settingViewModel.getIsLoggedOut().observe((LifecycleOwner) context, IsLoggedOut->{
@@ -122,7 +123,7 @@ public class SettingFragment extends Fragment {
             View dialogView = inflater.inflate(R.layout.dialog_changename, null);
             EditText editText = dialogView.findViewById(R.id.editAccountName); // Lấy EditText từ layout
             builder.setView(dialogView)
-                    .setTitle("Nhập thông tin")
+                    .setTitle("Chỉnh sửa tên")
                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
