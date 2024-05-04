@@ -24,57 +24,43 @@
         android:layout_width="match_parent"
 
         android:layout_height="150dp"
-        android:layout_marginTop="584dp"
+        android:layout_marginTop="524dp"
         android:background="@drawable/background_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
-        android:id="@+id/id_cam_btn"
+        android:id="@+id/id_mute_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="628dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="588dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_duo"
+            android:src="@drawable/ic_mic_off"
             android:tint="@color/white" />
+
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/id_speaker_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="628dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_baseline_speaker_phone_24"
-            android:tint="@color/white" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/id_mute_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="628dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="588dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_mic_off"
-            android:tint="@color/white" />
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_baseline_speaker_phone_24" />
     </FrameLayout>
 
     <FrameLayout
@@ -82,10 +68,11 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
 
-        android:layout_marginStart="324dp"
-        android:layout_marginTop="628dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="588dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -95,10 +82,26 @@
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/id_cam_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="588dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_cameraon"
+            android:tint="@color/white" />
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="125dp"
         android:layout_height="200dp"
         android:layout_marginStart="268dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="304dp"
         android:background="@drawable/background_camera"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

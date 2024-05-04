@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
 
         android:layout_height="150dp"
-        android:layout_marginTop="584dp"
+        android:layout_marginTop="516dp"
         android:background="@drawable/background_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,8 +33,8 @@
         android:id="@+id/id_cam_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="628dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="560dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -49,16 +49,16 @@
         android:id="@+id/id_speaker_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="628dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="560dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/ic_baseline_speaker_phone_24"
             android:tint="@color/white" />
-
     </FrameLayout>
 
     <FrameLayout
@@ -66,7 +66,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="228dp"
-        android:layout_marginTop="628dp"
+        android:layout_marginTop="560dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -82,8 +82,8 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
 
-        android:layout_marginStart="324dp"
-        android:layout_marginTop="628dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="560dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <androidx.appcompat.widget.AppCompatImageView
