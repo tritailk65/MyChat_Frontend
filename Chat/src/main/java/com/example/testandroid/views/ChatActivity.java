@@ -1,6 +1,7 @@
 package com.example.testandroid.views;
 
 import android.os.Bundle;
+import android.view.View;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,21 +25,17 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         replaceFragment(new ChatFragment());
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
 
-            switch (item.getItemId()){
-                case R.id.ChatList:
-                    ChatFragment chatFragment=new ChatFragment();
-                    replaceFragment(chatFragment);
-                    break;
-                case  R.id.CallList:
-                    replaceFragment(new CallFragment());
-                    break;
-                case R.id.Communication:
-                    replaceFragment(new CommunicationFragment());
-                    break;
-                case R.id.Setting:
-                    replaceFragment(new SettingFragment());
-                    break;
+            if (itemId == R.id.ChatList) {
+                ChatFragment chatFragment = new ChatFragment();
+                replaceFragment(chatFragment);
+            } else if (itemId == R.id.CallList) {
+                replaceFragment(new CallFragment());
+            } else if (itemId == R.id.Communication) {
+                replaceFragment(new CommunicationFragment());
+            } else if (itemId == R.id.Setting) {
+                replaceFragment(new SettingFragment());
             }
             return true;
         });

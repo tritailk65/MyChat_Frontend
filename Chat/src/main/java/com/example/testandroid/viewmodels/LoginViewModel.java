@@ -2,6 +2,7 @@ package com.example.testandroid.viewmodels;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 
 import androidx.databinding.BaseObservable;
@@ -16,23 +17,20 @@ import com.example.testandroid.repositories.AuthRepository;
 import com.example.testandroid.util.TokenManager;
 
 public class LoginViewModel extends BaseObservable {
-    private UserModel userModel;
+    private AuthRequest authRequest;
     private Context context;
     private AuthRepository authRepository;
-    private LiveData<UserModel> userModelLiveData ;
-    private LiveData<Boolean> isAuthLiveData = new LiveData<Boolean>() {};
-
+    private LiveData<Boolean> isAuthLiveData = new LiveData<Boolean>(){};
     public void setContextViewModel(Context context){
         this.context = context;
     }
-
     public void init(){
         authRepository = new AuthRepository();
         isAuthLiveData = authRepository.getIsAuthenticateSuccess();
     }
 
     public LoginViewModel(){
-        userModel = new UserModel("","");
+        authRequest = new AuthRequest("","");
     }
 
     private String successMessage = "Login success";
@@ -57,11 +55,11 @@ public class LoginViewModel extends BaseObservable {
     // for email variable
     @Bindable
     public String getUserEmail() {
-        return userModel.getEmail();
+        return authRequest.getEmail();
     }
 
     public void setUserEmail(String email) {
-        userModel.setEmail(email);
+        authRequest.setEmail(email);
         notifyPropertyChanged(BR.userEmail);
     }
 
@@ -69,11 +67,11 @@ public class LoginViewModel extends BaseObservable {
     // for password variable
     @Bindable
     public String getUserPassword() {
-        return userModel.getPassword();
+        return authRequest.getPassword();
     }
 
     public void setUserPassword(String password) {
-        userModel.setPassword(password);
+        authRequest.setPassword(password);
         notifyPropertyChanged(BR.userPassword);
     }
 
@@ -91,9 +89,6 @@ public class LoginViewModel extends BaseObservable {
             authRequest.setPassword(getUserPassword());
             authRepository.setContextRepo(context);
             authRepository.Authenticate(authRequest);
-            if(authRepository.getIsAuthenticateSuccess().getValue() == false){
-                setToastMessage(loginFailMessage);
-            }
         }
         else
             setToastMessage(errorMessage);

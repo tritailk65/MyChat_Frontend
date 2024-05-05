@@ -3,7 +3,7 @@ package com.example.testandroid.models;
 import com.google.gson.annotations.SerializedName;
 
 public class AuthResponse {
-    @SerializedName("resultObj")
+    @SerializedName("token")
     public String token;
 
     public String getToken() {
