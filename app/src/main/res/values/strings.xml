@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">TestApp</string>
+    <string name="app_name">ChatApp</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signIn">Đăng nhập</string>
+    <string name="select_user">Chọn người dùng</string>
+    <string name="type_a_message">Nhập nội dung</string>
 </resources>

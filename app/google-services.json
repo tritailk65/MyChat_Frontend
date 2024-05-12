@@ -1,22 +1,40 @@
 {
   "project_info": {
-    "project_number": "219611940051",
-    "firebase_url": "https://testapp3-5cd15-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "testapp3-5cd15",
-    "storage_bucket": "testapp3-5cd15.appspot.com"
+    "project_number": "893463788435",
+    "project_id": "mychat-7a901",
+    "storage_bucket": "mychat-7a901.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:219611940051:android:4c3140f9e9cb8c27f04026",
+        "mobilesdk_app_id": "1:893463788435:android:24cdb2fb54704a928e4666",
         "android_client_info": {
-          "package_name": "com.example.testapp"
+          "package_name": "com.example.chatapp"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAPGHjfKIPbh-rl6mOyfN-8nHWM4CHWMGc"
+          "current_key": "AIzaSyD_8PezI9-2lEnxZAfMNcgk-vTzfhR9EAs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893463788435:android:125339a9532364038e4666",
+        "android_client_info": {
+          "package_name": "com.example.testms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_8PezI9-2lEnxZAfMNcgk-vTzfhR9EAs"
         }
       ],
       "services": {
