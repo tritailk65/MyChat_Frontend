@@ -91,9 +91,12 @@ public class ChatActivity extends AppCompatActivity {
         getOrCreateChatroomModel();
         setupChatRecyclerView();
 
-        byte[] bytes = Base64.decode(otherUser.getImage(), Base64.DEFAULT);
-        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-        imageView.setImageBitmap(bitmap);
+        if (otherUser.getImage() != null) {
+            byte[] bytes = Base64.decode(otherUser.getImage(), Base64.DEFAULT);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+            imageView.setImageBitmap(bitmap);
+        }
+
     }
 
     void setupChatRecyclerView(){

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,9 +50,11 @@ public class RecentChatRecyclerAdapter extends FirestoreRecyclerAdapter<Chatroom
 
                             UserModel otherUserModel = task.getResult().toObject(UserModel.class);
 
-                            byte[] bytes = Base64.decode(otherUserModel.getImage(), Base64.DEFAULT);
-                            Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                            holder.profilePic.setImageBitmap(bitmap);
+                            if (otherUserModel.getImage() != null) {
+                                byte[] bytes = Base64.decode(otherUserModel.getImage(), Base64.DEFAULT);
+                                Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                                holder.profilePic.setImageBitmap(bitmap);
+                            }
 
                             holder.usernameText.setText(otherUserModel.getUsername());
                             if(lastMessageSentByMe)
