@@ -21,6 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_gray"
         android:hint="Enter message"
         android:inputType="text"
         android:maxLines="3"

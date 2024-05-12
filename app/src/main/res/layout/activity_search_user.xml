@@ -49,6 +49,8 @@
             android:layout_margin="10dp"
             android:hint="Username"
             android:padding="10dp"
+            android:textColor="@color/light_gray"
+            android:textColorHint="@color/light_gray"
             android:elevation="4dp"
             android:layout_toLeftOf="@id/search_user_btn"
             android:id="@+id/seach_username_input"

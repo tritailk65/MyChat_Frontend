@@ -73,6 +73,7 @@
             android:layout_toLeftOf="@id/message_send_btn"
             android:background="@drawable/edit_text_rounded_corner"
             android:elevation="4dp"
+            android:textColor="@color/light_gray"
             android:hint="Write message here"
             android:padding="10dp"
             android:id="@+id/chat_message_input"/>

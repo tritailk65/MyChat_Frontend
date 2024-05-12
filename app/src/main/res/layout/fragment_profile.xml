@@ -25,6 +25,8 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:hint="Username"
+        android:textColorHint="@color/light_gray"
+        android:textColor="@color/black"
         android:scaleType="centerCrop"
         android:inputType="text"
         android:layout_margin="10dp"
@@ -35,6 +37,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_gray"
         android:padding="10dp"
         android:hint="Phone"
         android:inputType="text"
@@ -69,6 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout"
+        android:textColor="@color/light_gray"
         android:id="@+id/logout_btn"/>
 
 
