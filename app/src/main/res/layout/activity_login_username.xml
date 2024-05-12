@@ -96,6 +96,7 @@
             android:padding="10dp"
             android:hint="Username"
             android:textColor="@color/black"
+            android:textColorLink="@color/light_gray"
             android:inputType="text"
             android:layout_margin="10dp"
             android:background="@drawable/edit_text_rounded_corner"

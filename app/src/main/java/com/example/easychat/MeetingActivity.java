@@ -32,11 +32,9 @@ public class MeetingActivity extends AppCompatActivity {
     private boolean micEnabled = true;
     private boolean webcamEnabled = true;
     UserModel currentUserModel;
-
     String userName;
 
     void getUserData(){
-
         FirebaseUtil.currentUserDetails().get().addOnCompleteListener(task -> {
             currentUserModel = task.getResult().toObject(UserModel.class);
             userName = currentUserModel.getUsername();
@@ -45,6 +43,7 @@ public class MeetingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getUserData();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meeting);
 
