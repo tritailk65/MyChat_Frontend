@@ -50,21 +50,29 @@ public class SearchUserActivity extends AppCompatActivity {
         });
     }
 
-    void setupSearchRecyclerView(String searchTerm){
+    void setupSearchRecyclerView(String searchTerm) {
+        // Xử lý chuỗi nhập vào để đảm bảo nó bắt đầu bằng "+84"
+        String processedSearchTerm;
+        if (searchTerm.startsWith("0")) {
+            processedSearchTerm = "+84" + searchTerm.substring(1);
+        } else {
+            processedSearchTerm = searchTerm;
+        }
 
         Query query = FirebaseUtil.allUserCollectionReference()
-                .whereGreaterThanOrEqualTo("username",searchTerm)
-                .whereLessThanOrEqualTo("username",searchTerm+'\uf8ff');
+                .whereEqualTo("phone", processedSearchTerm)
+                .whereGreaterThanOrEqualTo("phone", processedSearchTerm)
+                .whereLessThanOrEqualTo("phone", processedSearchTerm + '\uf8ff');
 
         FirestoreRecyclerOptions<UserModel> options = new FirestoreRecyclerOptions.Builder<UserModel>()
-                .setQuery(query,UserModel.class).build();
+                .setQuery(query, UserModel.class).build();
 
-        adapter = new SearchUserRecyclerAdapter(options,getApplicationContext());
+        adapter = new SearchUserRecyclerAdapter(options, getApplicationContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
         adapter.startListening();
-
     }
+
 
     @Override
     protected void onStart() {
