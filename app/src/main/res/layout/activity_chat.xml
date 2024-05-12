@@ -22,16 +22,19 @@
             android:textColor="@color/white"
             android:layout_marginStart="10dp"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/profile_pic_layout"
+            android:layout_toRightOf="@id/profile_pic_image_view"
             android:id="@+id/other_username"
             />
 
-        <include layout="@layout/profile_pic_view"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="10dp"
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:scaleType="centerCrop"
+            android:padding="@dimen/_4sdp"
+            android:background="@drawable/background_image"
+            app:riv_oval="true"
             android:layout_toRightOf="@id/back_btn"
-            android:id="@+id/profile_pic_layout"
+            android:id="@+id/profile_pic_image_view"
             />
 
         <ImageButton

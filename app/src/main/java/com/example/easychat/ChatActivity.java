@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -73,14 +76,6 @@ public class ChatActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.chat_recycler_view);
         imageView = findViewById(R.id.profile_pic_image_view);
 
-        FirebaseUtil.getOtherProfilePicStorageRef(otherUser.getUserId()).getDownloadUrl()
-                .addOnCompleteListener(t -> {
-                    if(t.isSuccessful()){
-                        Uri uri  = t.getResult();
-                        AndroidUtil.setProfilePic(this,uri,imageView);
-                    }
-                });
-
         backBtn.setOnClickListener((v)->{
             onBackPressed();
         });
@@ -95,6 +90,10 @@ public class ChatActivity extends AppCompatActivity {
 
         getOrCreateChatroomModel();
         setupChatRecyclerView();
+
+        byte[] bytes = Base64.decode(otherUser.getImage(), Base64.DEFAULT);
+        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+        imageView.setImageBitmap(bitmap);
     }
 
     void setupChatRecyclerView(){

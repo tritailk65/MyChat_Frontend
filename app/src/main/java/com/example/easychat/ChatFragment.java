@@ -11,9 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.easychat.adapter.RecentChatRecyclerAdapter;
-import com.example.easychat.adapter.SearchUserRecyclerAdapter;
 import com.example.easychat.model.ChatroomModel;
-import com.example.easychat.model.UserModel;
 import com.example.easychat.utils.FirebaseUtil;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.Query;
