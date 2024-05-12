@@ -18,6 +18,8 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.io.InputStream;
 
+import live.videosdk.rtc.android.VideoSDK;
+
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
@@ -25,14 +27,16 @@ public class MainActivity extends AppCompatActivity {
 
     ChatFragment chatFragment;
     ProfileFragment profileFragment;
-    CallFragment callFragment;
+    JoinMeetFragment joinMeetFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        VideoSDK.initialize(getApplicationContext());
         setContentView(R.layout.activity_main);
         chatFragment = new ChatFragment();
         profileFragment = new ProfileFragment();
+        joinMeetFragment = new JoinMeetFragment();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         searchButton = findViewById(R.id.main_search_btn);
@@ -50,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
                 if(item.getItemId()==R.id.menu_profile){
                     getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout,profileFragment).commit();
                 }
-//                if(item.getItemId()==R.id.menu_call){
-//                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout,callFragment).commit();
-//                }
+                if(item.getItemId()==R.id.menu_meet){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout,joinMeetFragment).commit();
+                }
                 return true;
             }
         });

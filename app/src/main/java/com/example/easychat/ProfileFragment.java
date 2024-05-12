@@ -48,12 +48,9 @@ public class ProfileFragment extends Fragment {
     Button updateProfileBtn;
     ProgressBar progressBar;
     TextView logoutBtn;
-
     UserModel currentUserModel;
     Uri selectedImageUri;
-
     private String encodedImage;
-
     public ProfileFragment() {
 
     }
@@ -170,14 +167,6 @@ public class ProfileFragment extends Fragment {
     void getUserData(){
         setInProgress(true);
 
-        FirebaseUtil.getCurrentProfilePicStorageRef().getDownloadUrl()
-                        .addOnCompleteListener(task -> {
-                                if(task.isSuccessful()){
-                                    Uri uri  = task.getResult();
-                                    AndroidUtil.setProfilePic(getContext(),uri,profilePic);
-                                }
-                        });
-
         FirebaseUtil.currentUserDetails().get().addOnCompleteListener(task -> {
             setInProgress(false);
             currentUserModel = task.getResult().toObject(UserModel.class);
@@ -188,9 +177,7 @@ public class ProfileFragment extends Fragment {
                 byte[] bytes = Base64.decode(imageString, Base64.DEFAULT);
                 Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                 profilePic.setImageBitmap(bitmap);
-            } else {
-               Toast.makeText(getContext(), "Không có hình ảnh", Toast.LENGTH_SHORT).show();
-            };
+            }
         });
     }
 
