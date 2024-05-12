@@ -9,6 +9,16 @@ public class UserModel {
     private String userId;
     private String fcmToken;
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    private String image;
+
     public UserModel() {
     }
 

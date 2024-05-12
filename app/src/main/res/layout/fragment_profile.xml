@@ -3,19 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfileFragment"
     android:orientation="vertical"
     android:gravity="center"
     android:layout_margin="20dp">
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:background="@drawable/circular_bg"
         android:backgroundTint="@color/my_primary"
         android:src="@drawable/person_icon"
+        android:background="@drawable/background_image"
         android:scaleType="centerCrop"
         android:layout_marginBottom="40dp"
+        app:riv_oval="true"
         android:id="@+id/profile_image_view"/>
 
     <EditText
@@ -23,6 +25,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:hint="Username"
+        android:scaleType="centerCrop"
         android:inputType="text"
         android:layout_margin="10dp"
         android:background="@drawable/edit_text_rounded_corner"

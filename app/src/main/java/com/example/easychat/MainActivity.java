@@ -16,6 +16,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.io.InputStream;
+
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
@@ -29,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         chatFragment = new ChatFragment();
         profileFragment = new ProfileFragment();
 
@@ -49,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 if(item.getItemId()==R.id.menu_profile){
                     getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout,profileFragment).commit();
                 }
-                if(item.getItemId()==R.id.menu_call){
-                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout,callFragment).commit();
-                }
+//                if(item.getItemId()==R.id.menu_call){
+//                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_layout,callFragment).commit();
+//                }
                 return true;
             }
         });
