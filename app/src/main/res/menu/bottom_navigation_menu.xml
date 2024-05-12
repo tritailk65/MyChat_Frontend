@@ -5,10 +5,10 @@
         android:icon="@drawable/chat_icon"
         android:id="@+id/menu_chat"
         />
-<!--    <item android:title="Calls"-->
-<!--        android:icon="@drawable/person_icon"-->
-<!--        android:id="@+id/menu_call"-->
-<!--        />-->
+    <item android:title="Calls"
+        android:icon="@drawable/person_icon"
+        android:id="@+id/menu_call"
+        />
     <item android:title="Profile"
         android:icon="@drawable/person_icon"
         android:id="@+id/menu_profile"

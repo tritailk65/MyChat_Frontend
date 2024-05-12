@@ -7,6 +7,13 @@
     android:background="@color/my_primary"
     tools:context=".SplashActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:scaleType="fitXY"
+        android:src="@drawable/splashbackground" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,7 +44,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Developed by easy tuto"
+        android:text="Develop with love ❤️"
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:layout_marginBottom="20dp"
