@@ -77,10 +77,16 @@ public class LoginUsernameActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 setInProgress(false);
                 if(task.isSuccessful()){
-                  userModel =    task.getResult().toObject(UserModel.class);
-                 if(userModel!=null){
-                     usernameInput.setText(userModel.getUsername());
-                 }
+                    userModel = task.getResult().toObject(UserModel.class);
+                    if(userModel != null){
+                        if (userModel.getUsername().isEmpty()) {
+                            usernameInput.setText(userModel.getUsername());
+                        } else {
+                            Intent intent = new Intent(LoginUsernameActivity.this,MainActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK );
+                            startActivity(intent);
+                        }
+                    }
                 }
             }
         });

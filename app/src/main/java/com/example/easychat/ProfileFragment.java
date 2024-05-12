@@ -24,6 +24,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.easychat.model.UserModel;
 import com.example.easychat.utils.AndroidUtil;
@@ -182,9 +183,14 @@ public class ProfileFragment extends Fragment {
             currentUserModel = task.getResult().toObject(UserModel.class);
             usernameInput.setText(currentUserModel.getUsername());
             phoneInput.setText(currentUserModel.getPhone());
-            byte[] bytes = Base64.decode(currentUserModel.getImage(), Base64.DEFAULT);
-            Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-            profilePic.setImageBitmap(bitmap);
+            String imageString = currentUserModel.getImage();
+            if (imageString != null) {
+                byte[] bytes = Base64.decode(imageString, Base64.DEFAULT);
+                Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                profilePic.setImageBitmap(bitmap);
+            } else {
+               Toast.makeText(getContext(), "Không có hình ảnh", Toast.LENGTH_SHORT).show();
+            };
         });
     }
 
