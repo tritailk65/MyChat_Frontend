@@ -95,6 +95,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:hint="OTP"
+            android:textColorHint="@color/light_gray"
             android:inputType="number"
             android:maxLength="6"
             android:textColor="@color/black"
